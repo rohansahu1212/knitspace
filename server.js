@@ -2,8 +2,8 @@ const express = require('express')
 const app = express();
 
 
- app.get('/billu', (req,res)=>{
-  res.send("billu here or kya kar rahe")
+ app.get('/', (req,res)=>{
+  res.render("index");
  } );
 
  app.listen(3000,()=>{
