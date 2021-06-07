@@ -9,25 +9,17 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <title>login</title>
+    <title>password set</title>
   </head>
   <body>
     <script>
         function validate()
         {
-            var email= document.getElementById("email").value;
-            var pass= document.getElementById("pass");
-            var regx= /knit.ac.in/;
-
-            var check=regx.test(email)
-            if(check===false)
+            var pass= document.getElementById("pass").value;
+            var cpass= document.getElementById("cpass").value;
+            if(pass!=cpass)
             {
-                alert("not valid username")
-                return false;
-            }
-            else if(pass.value.trim()=="")
-            {
-                alert("fill something in password")
+                alert("password not match");
                 return false;
             }
             else{
@@ -43,8 +35,8 @@
             <div class="col-md-6">
                 <div class="card">
                     <form onsubmit="return validate();" action="welcome.html" class="box">
-                        <h1>Login</h1>
-                        <p class="text-muted"> Please enter your login and password!</p> <input type="text" name="" id="email" placeholder="Email ID"> <input type="password" name="" id="pass" placeholder="Password"> <a class="forgot text-muted" href="#">Forgot password?</a> <input type="submit" name="" value="Login" href="#">
+                        <h1>Set password</h1>
+                        <p class="text-muted">make sure your password length greater than 8</p> <input type="password" name="" id="pass" placeholder="Enter Password"> <input type="password" name="" id="cpass" placeholder="Confirm Password">  <a class="forgot text-muted" href="#">strong password suggestion</a> <input type="submit" name="" value="Continue" href="#">
                         <div class="col-md-12">
                             <ul class="social-network social-circle">
                                 <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
