@@ -17,7 +17,7 @@
         {
             var email= document.getElementById("email").value;
             var pass= document.getElementById("pass");
-            var regx= /^[a-zA-z0-9\.-]+@[a-zA-z0-9-]+\.[a-z]{2,8}\.[a-z]{2,8}$/;
+            var regx= /^[a-zA-z0-9\.-]+@[a-zA-z0-9-]+\.[a-z]{2,8}(\.[a-z]{2,8})?$/;
             var check=1;
             var check=regx.test(email)
             if(check===false)
@@ -42,7 +42,7 @@
         }
         function chk(){
             var ema= document.getElementById("email").value;
-            var regx= /^[a-zA-z0-9\.-]+@[a-zA-z0-9-]+\.[a-z]{2,8}\.[a-z]{2,8}$/;
+            var regx= /^[a-zA-z0-9\.-]+@[a-zA-z0-9-]+\.[a-z]{2,8}(\.[a-z]{2,8})?$/;
             var check=regx.test(ema);
             var pic= document.getElementById("pic");
             var picpass= document.getElementById("picpass");
