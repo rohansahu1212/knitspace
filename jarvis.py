@@ -9,6 +9,7 @@ import wolframalpha
 import requests
 import subprocess
 from bs4 import BeautifulSoup as soup
+import pywhatkit as pw
 
 
 
@@ -99,6 +100,9 @@ if __name__ == '__main__':
                 music_dir = "C:\\Users\\91700\\Music\\music"
                 songs = os.listdir(music_dir)
                 os.startfile(os.path.join(music_dir,songs[0]))
+            elif "what" in query or "message" in query:
+                speak("okay sir")
+                pw.sendwhatmsg("+919839055102","hello papa","11","05") 
             
             elif "weather" in query:
                 api_key="8ef61edcf1c576d65d836254e11ea420"
